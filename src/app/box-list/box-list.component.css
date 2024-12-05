@@ -2,15 +2,28 @@
 .container {
     text-align: center;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .title-input {
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
   }
   
   .add-box-btn {
-    margin: 20px;
+    margin: 10px;
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 5px;
   }
   
   .add-box-btn:hover {
@@ -21,6 +34,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 20px;
   }
   
   @media (max-width: 500px) {

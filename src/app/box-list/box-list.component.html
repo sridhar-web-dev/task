@@ -1,9 +1,15 @@
 <!-- box-list.component.html -->
 <div class="container">
+    <!-- Input for the title of the new square -->
+    <input [(ngModel)]="newBoxTitle" class="title-input" placeholder="Enter title for new box" />
+  
+    <!-- Button to add a new box -->
     <button (click)="addBox()" class="add-box-btn">Add Box</button>
+    
+    <!-- Display boxes -->
     <div class="box-container">
       <app-box *ngFor="let box of boxes; let i = index" 
-                [index]="i+1" 
+                [index]="i + 1" 
                 [box]="box" 
                 (delete)="deleteBox(i)">
       </app-box>

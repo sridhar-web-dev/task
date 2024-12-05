@@ -8,9 +8,16 @@ import { Component } from '@angular/core';
 })
 export class BoxListComponent {
   boxes: any[] = [];
+  newBoxTitle: string = '';  // Variable to store the title entered by the user
 
   addBox() {
-    this.boxes.push({ title: `Box ${this.boxes.length + 1}` });
+    if (this.newBoxTitle.trim() === '') {
+      alert('Please enter a title for the box.');
+      return;
+    }
+
+    this.boxes.push({ title: this.newBoxTitle });
+    this.newBoxTitle = '';  // Clear the input after adding the box
   }
 
   deleteBox(index: number) {
