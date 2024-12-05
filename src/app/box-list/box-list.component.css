@@ -1,0 +1,31 @@
+/* box-list.component.css */
+.container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .add-box-btn {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .add-box-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  @media (max-width: 500px) {
+    .box-container {
+      justify-content: center;
+    }
+  }
+  

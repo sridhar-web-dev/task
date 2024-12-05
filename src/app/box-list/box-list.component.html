@@ -1,0 +1,12 @@
+<!-- box-list.component.html -->
+<div class="container">
+    <button (click)="addBox()" class="add-box-btn">Add Box</button>
+    <div class="box-container">
+      <app-box *ngFor="let box of boxes; let i = index" 
+                [index]="i+1" 
+                [box]="box" 
+                (delete)="deleteBox(i)">
+      </app-box>
+    </div>
+  </div>
+  
